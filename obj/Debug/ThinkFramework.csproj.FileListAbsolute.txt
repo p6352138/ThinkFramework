@@ -1,0 +1,16 @@
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\ThinkFramework.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\ThinkFramework.pdb
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\LitJson.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\Ngui.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\Protocol.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\Thrift 0.9.0.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\UnityEditor.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\UnityEngine.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\Mono.Cecil.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\nunit.framework.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\Ngui.pdb
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\bin\Debug\Protocol.pdb
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\obj\Debug\ThinkFramework.csprojResolveAssemblyReference.cache
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\obj\Debug\ThinkFramework.dll
+D:\Work\Projects\VisualStudio\ThinkFramework\ThinkFramework\ThinkFramework\obj\Debug\ThinkFramework.pdb

@@ -1,0 +1,1467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1E0E203-869C-42CF-93FC-3E2D3F8A53E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThinkFramework</RootNamespace>
+    <AssemblyName>ThinkFramework</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;UNITY_EDITOR</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson">
+      <HintPath>..\..\..\PublicLib\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thrift">
+      <HintPath>..\..\..\PublicLib\Thrift.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\Libs\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Libs\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\manager\com\think\cache\cd\CDTimeItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\cache\cd\CDTimeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\cache\friend\FriendManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\cache\IUpdater.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\cache\lockscene\LockSceneManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\cache\package\PackageManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\data\BuildingFunctionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\data\MainMenuManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\data\PrefabManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\data\ProtocolManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\data\RuleManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\com\think\data\SceneSwitchManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\guide\GuideManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\ISceneManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\IVersionControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\manager\message\MessageManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\net\com\think\io\IAdapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\net\com\think\io\QueueCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\net\com\think\io\RequestWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\net\com\think\io\ResponseWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\net\com\think\io\SocketClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\net\com\think\io\Util.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\net\RequestHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\ireadygo\wr\framework\messages\ErrorResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\ireadygo\wr\framework\messages\HeartBeatRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\ireadygo\wr\framework\messages\HeartBeatResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AccountResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ActivationCodesRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ActiveAwardResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ActiveDegreeRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ActiveDegreeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ActiveMsgResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ActivityRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ActivityResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ActivityStartResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AdvPropertyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AlipayRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AlipayResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AllGeneralListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\Answer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AreaResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ArmyAdviserConditionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ArmyAdviserListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ArmyAdviserRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ArmyAdviserResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ArmyAdviserSkillResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AwardBoxListRensponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AwardBoxRensponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AwardDeleteResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AwardMenuListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AwardMenuRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AwardMenuResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\AwardResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BagOpenCellResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BannerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BasePropertyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BelleEventResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BetMsgResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BloodyBattleCheckpointResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BloodyBattleEmbattleListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BloodyBattleEmbattleResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BloodyBattleRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BloodyBattleResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BorrowGeneralResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossDungeonGeneralListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossDungeonGeneralResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossDungeonRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightMenuResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightPeopleNumberResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightRankingResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightResultResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightSynopsisListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightSynopsisResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BossFightTheEndResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BoxItemListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\BuyRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CDTimeListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CDTimeRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CDTimeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ChatRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ChatResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CityResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightEndAwardResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightEnterInterfaceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightMapResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanfightPartScoreResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightPlayerBuffListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightPlayerBuffResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightPlayerMoveResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightPlayerSelfResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanfightPlayerToWayResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanfightPointInsideAddPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanfightPointInsideResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightPointPeopleListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightPointPeopleResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightPointResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanfightRallyPointResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightRankingListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightRankingResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightResponse2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightSeatResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightSimpleFightDataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightTableResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanFightWaytResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanInviteListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanInviteResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanKnowledgeRDResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanKnowledgeRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanKnowledgeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanKnowledgeSpeedResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanKnowledgeUpgradeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanOfficerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanRankingDetailResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanRankingListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanRankingRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanRankingResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ClanVoteListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CollectRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CollectResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ConfirmmationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ConfirmmationResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ConscriptRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ConscriptResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ConstructResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CtiyAreaResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CureWaterReqeust.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\CureWaterResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DataCollectionRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DeletePlayerOrdnanceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonGeneralListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonGeneralModelResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonGeneralResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonMapResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonModelResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonWarListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\DungeonWarResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EmbattleListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EmbattleResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EnterGameRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EnterGameResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentBatchWashResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentCompleteBatchWashResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentIntensifyRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentIntensifyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentNormalWashResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentSynthesizeRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentWashBaseDataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentWashOpenResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentWashRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentWashResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipmentWashUpgradeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipWashBaseResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\EquipWashTroughResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExceptionCollectionRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExchangeOrdnanceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExclusiveOrdnanceTrainResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExitGameRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExitGameResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExpeditionFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExpeditionFightResultResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExpeditionMenuResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExpeditionRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ExpeditionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FarmlandOreLogResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FarmlandOreRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FightActionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FightArmyAdviserResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FightFriendDataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FightLogResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FightSchemeActionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FightStrategyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FirstPayGeneralListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FoodRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FoodResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FriendResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FriendsRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FunctionHintListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\FunctionHintResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GameRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GameResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GeneralInheritAttributeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GeneralInheritResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GeneralListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GeneralPeirasmosResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GeneralResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GVE_DissolutionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GVE_FightCreateRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GVGActionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GVGFightRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GVGFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GVGHarmTargetResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\GVGObjectResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\HaremListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\HaremOperateListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\HaremOperateResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\HaremRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\HaremResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\HarmTargetResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\HeartBeatRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\HeroRankingResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\IconListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\IconResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\InEquipmentBatchWashResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\InheritRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\InheritResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\InvestitureRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\InvestitureResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ItemDetailResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ItemOutputMapResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ItemSynthesizeMaterialResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\KingsFightLogResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\KingsFightRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\KingsFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\KingsFightTableResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\KingsMoBaiResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\KingsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\KnowledgeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\LegionFightAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\LegionFightPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\LegionFightRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\LegionFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\LegionHarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ListActivityResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ListDeletePlayerOrdnanceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ListExchangeOrdnanceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ListPlayerBossFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\LoginRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\LoginResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\LookPlayerRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MapAreaRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MapAreaResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MapItemsListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MapItemsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MaterialResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MedicineResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MorrowAwardListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MorrowAwardRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MorrowAwardResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\MyFriendsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossFightResultConfirmResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossPlayerFightLogResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossRefreshFoeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossScoreRankResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerFightKonckoutMatchResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsFightLogResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsFightRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsFightTableListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsFightTableResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsFightWeedOutResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsFightWeedOutResultResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsHonorPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsTrophyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossServerKingsUserResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossWeedOutPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewCrossWeedOutScoreRankPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewPlayerFightAwardResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewPlayerFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewPlunderPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewPlunderRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NewPlunderResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NinePayRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\NinePayResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OprationListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OprationMapResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OprationNotifyListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OprationNotifyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OprationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OprationResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OrdnanceBagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OrdnanceBusinessmanResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\OrdnanceDetailResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PayRecordListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PersonsDungeonDeleteResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PersonsDungeonListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PersonsDungeonPlayersListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PersonsDungeonPlayersResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PersonsDungeonRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PersonsDungeonResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PersonsDungeonUpdateNumberResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PickPeachRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PickPeachResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerAttributeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBagItemsUpdateListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBagItemUpdateResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBagRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBagUseItemsRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBelleListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBelleRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBelleResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBossFightHarmResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerBossFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerCDTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerCityRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerCityResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerClanKnowledgeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerCompare2Response.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerCompareInfo1Response.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerCompareResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerEatMedicineResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerEmbattleRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerFightDataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerFightLogRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerFightLogResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerFightRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerFightRerunRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerFightScoreResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerInfoResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerKnowledgeRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerKnowledgeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerKnowledgeUpgradeRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerKnowledgeUpgradeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerMapItemsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerMedicineRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerMedicineResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerNewPlunderDungeonResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerNewPlunderMapResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerOrdnanceBagRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerOrdnanceBagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerOrdnanceRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerPotentialRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerPotentialResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerPotentialUpgradeRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerPotentialUpgradeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerRecruitGeneralRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerRecruitGeneralResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerResourcesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerSchemeBagRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerSchemeBagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerStarBagRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerStarBagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerStrategyListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerStrategyRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerStrategyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerTrainCaoDianResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerTrainListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerTrainRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerTrainResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerTreasuryRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerTreasuryResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerWashPointRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerWashPointResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlayerYiJianOrdnanceBagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\Player_GVE_InfoListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\Player_GVE_InfoResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlunderGarrisonResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PlunderPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PositionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\PotentialResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QianDaoArmyAdviserListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QianDaoArmyAdviserRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QianDaoAwardResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QianDaoRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QianDaoResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QueryPlayerDetailRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QueryPlayerDetailResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QueryPlayerGeneralDetailResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QuestionRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QuestionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QuestListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QuestNotifyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QuestProgressResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QuestRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\QuestResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RankingFightLogResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RankingRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RankingResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RecruitGeneralListRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RecruitGeneralListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RecruitGeneralRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RecruitGeneralResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ResourceListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ResourceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RollDiceRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RollDiceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RpgDungeonRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\RpgFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\SchemeBagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\SchemeDetailResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\SchemeSynthesizeListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\SchemeSynthesizeMaterialResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ServerListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ServerRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ServerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ServerRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ServiceProblemListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ServiceProblemRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ServiceProblemResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ShortMsgListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ShortMsgRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ShortMsgResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\SkillData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\SkipHintResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\StarBagResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\StarDetailResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\StarListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\StoreListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\StoreRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\StoreResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\StoreUpdateResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\StrategyRestrainResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\SystemAnnouncesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ThroughDungeonGeneralListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ThroughDungeonGeneralResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ThroughDungeonRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ThroughFightListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ThroughFightResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ThroughtDungeonGeneralListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ThroughtDungeonRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TopPlayerResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TopRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TopResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TopTypeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\ToShowOffRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TreasuryResourceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TreasuryResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TurnplateRankingListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TurnplateRankingResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TurnplateRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TurnplateResourceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TurnplateResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TurntableRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\TurntableResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UIHintListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UIHintResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UniqueSkillGroupResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UniqueSkillListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UniqueSkillRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UniqueSkillResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UpdateGeneralAttributeListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UpdateGeneralAttributeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UpdateGeneralPropertyListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UpdateGeneralPropertyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UpdatePLayerAttributeListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\UpdatePlayerAttributeResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\VipPayAwardResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\VipPayListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\VipPayRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\VipPayResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WalkRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WarningResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WashStoneBuyResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WashStoneShopResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WordMapRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WorldCollectListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WorldCollectRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WorldCollectResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\WorldMapInfluenceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\YeePayRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\protocol\com\think\messages\YeePayResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\ui\ISecondUpdate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\utils\Logger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\utils\TFUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
